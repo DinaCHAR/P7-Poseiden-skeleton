@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Required;
 import javax.persistence.*;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import java.sql.Date;
 import java.sql.Timestamp;
 
