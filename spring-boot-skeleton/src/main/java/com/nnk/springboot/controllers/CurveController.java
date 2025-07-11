@@ -1,6 +1,6 @@
 package com.nnk.springboot.controllers;
 
-import com.nnk.springboot.domain.CurvePoint;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -9,7 +9,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.validation.Valid;
+import com.nnk.springboot.domain.CurvePoint;
+import com.nnk.springboot.services.CurveService;
+
+import jakarta.validation.Valid;
 
 @Controller
 public class CurveController {
@@ -21,7 +24,6 @@ public class CurveController {
     public String home(Model model)
     {
         // TODO: find all Curve Point, add to model OK
-    	public String home(Model model) {
             model.addAttribute("curvePoints", curveService.findAll());
             return "curvePoint/list";
     }
